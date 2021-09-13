@@ -1,0 +1,240 @@
+<! DOCTYPE html>  
+<html>  
+    <head>  
+    <meta charset="utf-8">  
+    <title>  
+         Calculator 
+    </title>  
+    <link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">  
+    <!-- CSS property to create interactive  
+        calculator interface -->  
+    <style>  
+
+    
+    html {  
+  height: 200vh;  
+  display: flex;  
+  align-items: center;  
+  justify-content: center;  
+  background-color: #2d3436;  
+  background-image: linear-gradient(315deg, #060e55 0%, #3ed39a 74%, #ccd85b);  
+  font-family: 'Cookie', cursive;  
+}  
+.title {  
+margin-bottom: 10px;  
+padding: 5px 0;  
+font-size: 40px;  
+font-weight: bold;  
+text-align: center;  
+color: rgb(15, 9, 70);  
+font-family: 'Cookie', cursive; 
+ 
+}  
+input[type=button] {  
+  width: 60px;  
+  height: 60px;  
+  float: left;  
+  padding: 0;  
+  margin: 5px;  
+  box-sizing: border-box;  
+  background: #ca7c4f;  
+  border: 2px solid #3d0242;
+  font-size: 30px;  
+  line-height: 30px;  
+  border-radius: 9px;  
+  font-weight: 700;  
+  color: #1f0920;  
+  cursor: pointer; 
+  box-shadow: 0 8px rgb(173, 141, 122);
+  
+}  
+
+input[type=button]:hover {background: #e9dd71}
+
+input[type=button]:active{
+    background-color: #dfcd32;
+  box-shadow: 0 4px rgb(136, 94, 70);
+ transform: translateY(4px)
+
+}
+
+
+input[type=text] {  
+  width: 270px;  
+  height: 60px;  
+  float: left;  
+  padding: 0;  
+  box-sizing: border-box;  
+  border: rgb(182, 245, 81);  
+  background: none;  
+  color: rgb(124, 17, 17);  
+  text-align: right;  
+  font-weight: 700;  
+  font-size: 60px;  
+  line-height: 60px;  
+  margin: 0px;  
+  }  
+.calculator {  
+  background-color: #b2b0b3;  
+  box-shadow: 0px 0px 0px 8px rgb(2, 32, 11);  
+  border: 5px solid rgb(60, 66, 5);  
+  border-radius: 10px; 
+ 
+}  
+#display {  
+  height: 50px;  
+  text-align: right;  
+  background-color: black;  
+  border: 3px solid rgb(146, 75, 8);  
+  font-size: 25px;  
+  left: 2px;  
+  top: 2px;  
+  color: rgb(248, 232, 9);  
+}  
+.btnTop {  
+  color: rgb(85, 42, 42);  
+  background-color: #920303;  
+  font-size: 14px;  
+  margin: auto;  
+  width: 50px;  
+  height: 25px;  
+}
+
+.button {
+  background-color: #f3d983; /* Green */
+  border: none;
+  color: rgb(20, 0, 5);
+  border: 3px solid #800515;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  position:relative;
+  top: 730px;
+  left: 14px;
+  cursor:pointer;
+  border-radius: 12px;
+}
+
+ .button:hover {
+   background:linear-gradient(300deg , #d4753d,#dfcd32) }
+
+    </style>  
+</head>  
+<body>  
+  <script src="script.js"></script>
+ 
+  <!--<button class="button">Change the background</button>-->
+  <button class="button" 
+  onclick="changeColor()">
+  Change the background color
+  </button>
+
+    <div class = "title"  <align="center">  
+       Simple Calculator
+    </div>  
+    <form name="Calculator" class = "calculator" >  
+<table border="2" align="center" cellpadding="15" cellspacing="12" bgcolor="#c0c0c0">  
+<tr>  
+<td>  
+<input type="text" name="Input" Size="35" id="display">  
+<br>  
+</td>  
+</tr>  
+<tr>  
+<td>  
+<input type="button" name = "one" style="font-size:30px" value=" 1 "
+ OnClick="Calculator.Input.value += '1'"
+ title="one" >
+<input type="button" name = "two" style = "font-size:30px" value=" 2 " 
+OnCLick="Calculator.Input.value += '2'"
+title = "two">
+<input type="button" name = "three" style="font-size:30px" value=" 3 "
+ OnClick="Calculator.Input.value += '3'"
+ title = "three">
+<input type="button" name="add" class ="btnTop" style="font-size:30px" value=" + " 
+OnClick="Calculator.Input.value += ' + '"
+title = "addition">
+
+<br>
+
+<input type="button" name = "four" style="font-size:30px" value=" 4 "
+ OnClick="Calculator.Input.value += '4'"
+ title = "four" >
+<input type="button" name = "five" style="font-size:30px" value=" 5 "
+ OnCLick="Calculator.Input.value += '5'"
+ title = "five" >
+<input type="button" name = "six" style="font-size:30px" value=" 6 " 
+OnClick="Calculator.Input.value += '6'"
+title = "six" >
+<input type="button" name = "minus" style="font-size:30px" value=" - " 
+OnClick="Calculator.Input.value += ' - '"
+title = "subtraction">
+
+<br>  
+
+<input type="button" name = "seven" style="font-size:30px" value=" 7 " 
+OnClick="Calculator.Input.value += '7'"
+title = "seven">
+<input type="button" name = "eight" style="font-size:30px" value=" 8 "
+ OnCLick="Calculator.Input.value += '8'"
+ title = "eight">
+<input type="button" name = "nine" style="font-size:30px" value=" 9 "
+ OnClick="Calculator.Input.value += '9'"
+ title = "nine">
+<input type="button" name = "mul" style="font-size:30px" value=" × "   
+OnClick="Calculator.Input.value += ' * '"
+title = "multiply">
+
+<br>  
+
+<input type="button" name = "clear" style="font-size:30px" value="CE"
+ OnClick="Calculator.Input.value = ''" 
+ title="Clear the display">  
+<input type="button" name="zero" style="font-size:30px" value=" 0 " 
+OnClick="Calculator.Input.value += '0'"
+title = "Zero"  >
+<input type="button" name="DoIt" style="font-size:30px" value=" = " 
+OnClick="Calculator.Input.value = eval(Calculator.Input.value)"
+title = "equals to">
+<input type="button" name="div" style="font-size:30px" value=" / " 
+OnClick="Calculator.Input.value += ' / '"
+title = "division">
+
+<br>  
+
+<input type="button" name="percent" style="font-size:30px" value=" % " 
+OnClick="Calculator.Input.value = eval(Calculator.Input.value/100) "
+title = "displayed value divided by 100">
+<input type="button" name="point" style="font-size:30px" value="." 
+OnClick="Calculator.Input.value  += '.'"
+title = "decimal">
+<input type="button" name="pi" style="font-size:30px" value="𝝅"
+OnClick="Calculator.Input.value  = eval(Calculator.Input.value*3.14159265359)"
+title = "pi">
+<input type="button" name="e" style="font-size:30px" value="e"
+OnClick="Calculator.Input.value  = eval(Calculator.Input.value*2.71828182846)"
+title = "e">
+
+<br>
+
+<input type="button" name="power2" style="font-size:30px" value="x&sup2"
+OnClick="Calculator.Input.value  = eval(Calculator.Input.value*Calculator.Input.value)"
+title = "square the displayed value">
+<input type="button" name="inverse" style="font-size:30px" value="1/x"
+OnClick="Calculator.Input.value  = eval(1/Calculator.Input.value)"
+title = "x^-1">
+<input type="button" name="sign" style="font-size:30px" value="(-)"
+OnClick="Calculator.Input.value  = eval(Calculator.Input.value * -1)"
+title = "-1 multiplied by the displayed value">
+<input type="button" name="square root" style="font-size:30px" value="√ "
+OnClick="Calculator.Input.value =  Math.sqrt(Calculator.Input.value)" 
+title = "square root of the displayed value">
+</td>  
+
+</tr>  
+</table>  
+</form>  
+</body>  
+</html>     
